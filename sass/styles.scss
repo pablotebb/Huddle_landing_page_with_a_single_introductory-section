@@ -1,0 +1,144 @@
+@use "initial";
+@use "variables";
+@use "footer";
+
+.main-container {
+  // border: 1px solid red;
+  margin: 34px auto 38px;
+  min-width: 270px;
+  max-width: 275px;
+}
+
+.section-1 {
+  &__logo {
+    // border: 1px solid green;
+    width: 121px;
+    padding-bottom: 52px;
+  }
+  &__mockups {
+    width: 100%;
+    padding-bottom: 42px;
+  }
+}
+
+.section-2 {
+  // border: 1px solid yellow;
+  padding-bottom: 57px;
+  &__title {
+    font-size: 23px;
+    color: variables.$White;
+    text-align: center;
+    font-family: variables.$Font-family-heading;
+    height: 84px;
+  }
+  &__description {
+    font-size: 14.5px;
+    color: variables.$White;
+    text-align: center;
+    font-weight: 1;
+    height: 135px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  &__button {
+    background-color: variables.$White;
+    color: variables.$Violet;
+    width: 190px;
+    height: 37px;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 12px;
+    &:hover {
+      background-color: variables.$Soft-Magenta;
+      color: variables.$White;
+    }
+  }
+
+  .social-networks {
+    // border: 1px solid red;
+    margin-top: 60px;
+    padding-bottom: 30px;
+    &__links {
+      // border: 1px solid variables.$White;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      div {
+        a {
+          text-decoration: none;
+          font-size: 11px;
+          color: variables.$White;
+          height: 23px;
+          width: 23px;
+          padding-top: 4px;
+          border: 2px solid variables.$White;
+          border-radius: 45%;
+          text-align: center;
+          &:hover {
+            color: variables.$Soft-Magenta;
+            border-color: variables.$Soft-Magenta;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-size: unset;
+  }
+  .main-container {
+    // border: 1px solid red;
+    margin: 65px auto 37px;
+    min-width: 1339px;
+    display: flex;
+    gap: 39px;
+  }
+
+  .section-1 {
+    // border: 1px solid red;
+    width: 55%;
+    &__logo {
+      // border: 1px solid green;
+      padding-left: 8px;
+      width: 129px;
+    }
+  }
+
+  .section-2 {
+    // border: 1px solid yellow;
+    width: 45%;
+    padding-top: 125px;
+    &__title {
+      text-align: left;
+      width: 300px;
+    }
+    &__description {
+      text-align: left;
+      height: 90px;
+      width: 420px;
+    }
+    &__button {
+      margin: unset;
+      width: 150px;
+    }
+
+    .social-networks {
+      // border: 1px solid red;
+      padding-top: 260px;
+      &__links {
+        justify-content: flex-end;
+        gap: 10px;
+        padding-right: 149px;
+      }
+    }
+  }
+}
